@@ -8,17 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		B8A3DE742C60150900F3233E /* UserManagementQuickStartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE732C60150900F3233E /* UserManagementQuickStartApp.swift */; };
-		B8A3DE762C60150900F3233E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE752C60150900F3233E /* ContentView.swift */; };
 		B8A3DE782C60150B00F3233E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A3DE772C60150B00F3233E /* Assets.xcassets */; };
 		B8A3DE7B2C60150B00F3233E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A3DE7A2C60150B00F3233E /* Preview Assets.xcassets */; };
+		B8A3DE832C60166B00F3233E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B8A3DE822C60166B00F3233E /* Supabase */; };
+		B8A3DE852C60169200F3233E /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE842C60169200F3233E /* Supabase.swift */; };
+		B8A3DE872C60899B00F3233E /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE862C60899B00F3233E /* AuthView.swift */; };
+		B8A3DE8A2C608E2D00F3233E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE892C608E2D00F3233E /* ProfileView.swift */; };
+		B8A3DE8C2C608ECE00F3233E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE8B2C608ECE00F3233E /* Models.swift */; };
+		B8A3DE8E2C60A5F600F3233E /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE8D2C60A5F600F3233E /* AppView.swift */; };
+		B8A3DE902C60A79C00F3233E /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE8F2C60A79C00F3233E /* AvatarImage.swift */; };
+		B8A3DE922C614A3E00F3233E /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE912C614A3E00F3233E /* GameView.swift */; };
+		B8A3DE942C614F9F00F3233E /* SupabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE932C614F9F00F3233E /* SupabaseFunctions.swift */; };
+		B8A3DE962C61A0FE00F3233E /* Leaderboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */; };
+		B8A3DE982C61A20C00F3233E /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */; };
+		B8A3DE9A2C61C32200F3233E /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE992C61C32200F3233E /* ListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B8A3DE702C60150900F3233E /* UserManagementQuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserManagementQuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A3DE732C60150900F3233E /* UserManagementQuickStartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementQuickStartApp.swift; sourceTree = "<group>"; };
-		B8A3DE752C60150900F3233E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B8A3DE772C60150B00F3233E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8A3DE7A2C60150B00F3233E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8A3DE842C60169200F3233E /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		B8A3DE862C60899B00F3233E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		B8A3DE882C608DAB00F3233E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B8A3DE892C608E2D00F3233E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B8A3DE8B2C608ECE00F3233E /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B8A3DE8D2C60A5F600F3233E /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		B8A3DE8F2C60A79C00F3233E /* AvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
+		B8A3DE912C614A3E00F3233E /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B8A3DE932C614F9F00F3233E /* SupabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseFunctions.swift; sourceTree = "<group>"; };
+		B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboards.swift; sourceTree = "<group>"; };
+		B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
+		B8A3DE992C61C32200F3233E /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A3DE832C60166B00F3233E /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +74,19 @@
 		B8A3DE722C60150900F3233E /* UserManagementQuickStart */ = {
 			isa = PBXGroup;
 			children = (
+				B8A3DE882C608DAB00F3233E /* Info.plist */,
 				B8A3DE732C60150900F3233E /* UserManagementQuickStartApp.swift */,
-				B8A3DE752C60150900F3233E /* ContentView.swift */,
+				B8A3DE912C614A3E00F3233E /* GameView.swift */,
+				B8A3DE892C608E2D00F3233E /* ProfileView.swift */,
+				B8A3DE8B2C608ECE00F3233E /* Models.swift */,
+				B8A3DE932C614F9F00F3233E /* SupabaseFunctions.swift */,
+				B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */,
+				B8A3DE8F2C60A79C00F3233E /* AvatarImage.swift */,
+				B8A3DE992C61C32200F3233E /* ListingView.swift */,
+				B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */,
+				B8A3DE8D2C60A5F600F3233E /* AppView.swift */,
+				B8A3DE862C60899B00F3233E /* AuthView.swift */,
+				B8A3DE842C60169200F3233E /* Supabase.swift */,
 				B8A3DE772C60150B00F3233E /* Assets.xcassets */,
 				B8A3DE792C60150B00F3233E /* Preview Content */,
 			);
@@ -83,6 +117,9 @@
 			dependencies = (
 			);
 			name = UserManagementQuickStart;
+			packageProductDependencies = (
+				B8A3DE822C60166B00F3233E /* Supabase */,
+			);
 			productName = UserManagementQuickStart;
 			productReference = B8A3DE702C60150900F3233E /* UserManagementQuickStart.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +148,9 @@
 				Base,
 			);
 			mainGroup = B8A3DE672C60150900F3233E;
+			packageReferences = (
+				B8A3DE812C60166B00F3233E /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = B8A3DE712C60150900F3233E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +177,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8A3DE762C60150900F3233E /* ContentView.swift in Sources */,
+				B8A3DE852C60169200F3233E /* Supabase.swift in Sources */,
+				B8A3DE902C60A79C00F3233E /* AvatarImage.swift in Sources */,
+				B8A3DE8A2C608E2D00F3233E /* ProfileView.swift in Sources */,
+				B8A3DE962C61A0FE00F3233E /* Leaderboards.swift in Sources */,
+				B8A3DE8E2C60A5F600F3233E /* AppView.swift in Sources */,
+				B8A3DE9A2C61C32200F3233E /* ListingView.swift in Sources */,
+				B8A3DE8C2C608ECE00F3233E /* Models.swift in Sources */,
+				B8A3DE942C614F9F00F3233E /* SupabaseFunctions.swift in Sources */,
+				B8A3DE982C61A20C00F3233E /* LeaderBoardCell.swift in Sources */,
+				B8A3DE872C60899B00F3233E /* AuthView.swift in Sources */,
+				B8A3DE922C614A3E00F3233E /* GameView.swift in Sources */,
 				B8A3DE742C60150900F3233E /* UserManagementQuickStartApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +324,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UserManagementQuickStart/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UserManagementQuickStart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +353,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UserManagementQuickStart/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UserManagementQuickStart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8A3DE812C60166B00F3233E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B8A3DE822C60166B00F3233E /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8A3DE812C60166B00F3233E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8A3DE682C60150900F3233E /* Project object */;
 }
