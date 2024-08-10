@@ -70,6 +70,25 @@ final class SupabaseFunctions {
         }
     }
     
+    
+    func getSignedURL(for avatarPath: String) async throws -> URL {
+        let expiresIn = 3600 // URL expires in 1 hour
+        
+        // Generate the signed URL using Supabase storage
+        let response = try await supabase.storage
+            .from("avatars")
+            .createSignedURL(path: avatarPath, expiresIn: expiresIn)
+        
+        // Extract the signed URL and convert it to a URL object
+        let signedURLString = response.absoluteString
+        if let signedURL = URL(string: signedURLString) {
+            return signedURL
+        } else {
+            throw URLError(.badURL)
+        }
+    }
+
+    
     func updateCount(count: Int) async throws {
         let currentUser = try await supabase.auth.session.user
         

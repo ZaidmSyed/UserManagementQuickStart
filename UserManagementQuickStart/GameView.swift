@@ -17,17 +17,44 @@ struct GameView: View {
             VStack (spacing: 15) {
                 Text("\(count)")
                 
-                Button {
-                    count+=1
-                    Task {
-                        do {
-                            try await addOne()
-                        } catch {
-                        print("Error updating count: \(error)")
+                HStack {
+                    Button {
+                        count+=1
+                        Task {
+                            do {
+                                try await addOne()
+                            } catch {
+                            print("Error updating count: \(error)")
+                            }
                         }
+                    } label: {
+                        Text("+1")
+                            .font(.headline)               // Set the font style
+                            .foregroundColor(.white)       // Set the text color
+                            .padding()                     // Add padding around the text
+                            .background(Color.blue)        // Set the background color
+                            .cornerRadius(10)              // Round the corners
+                            .shadow(radius: 5)
                     }
-                } label: {
-                    Text("+1")
+                        
+                        Button {
+                            count = 0
+                            Task {
+                                do {
+                                    try await addOne()
+                                } catch {
+                                print("Error updating count: \(error)")
+                                }
+                            }
+                        } label: {
+                            Text("Reset")
+                                .font(.headline)               // Set the font style
+                                .foregroundColor(.white)       // Set the text color
+                                .padding()                     // Add padding around the text
+                                .background(Color.blue)        // Set the background color
+                                .cornerRadius(10)              // Round the corners
+                                .shadow(radius: 5)
+                    }
                 }
             }
             .padding()
