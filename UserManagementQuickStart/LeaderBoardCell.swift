@@ -12,7 +12,7 @@ struct LeaderBoardCell: View {
     
     var user: Profile
     var place: Int
-//    @State var avatarImage: AvatarImage?
+    //    @State var avatarImage: AvatarImage?
     @State private var avatarURL: URL? = nil
     
     
@@ -23,34 +23,34 @@ struct LeaderBoardCell: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color.white)
             
-//            if let avatarImage {
-//              avatarImage.image
-//                    .resizable()
-//                    .frame(width: 40, height: 40)
-//                    .clipShape(Circle())
-//            } else {
-//                Image(systemName: "person.fill")
-//                    .resizable()
-//                    .frame(width: 40, height: 40)
-//                    .clipShape(Circle())
-//            }
+            //            if let avatarImage {
+            //              avatarImage.image
+            //                    .resizable()
+            //                    .frame(width: 40, height: 40)
+            //                    .clipShape(Circle())
+            //            } else {
+            //                Image(systemName: "person.fill")
+            //                    .resizable()
+            //                    .frame(width: 40, height: 40)
+            //                    .clipShape(Circle())
+            //            }
             
             if let avatarURL = avatarURL {
                 KFImage(URL(string: avatarURL.absoluteString))
-                                .resizable()
-                                .placeholder {
-                                    Image(systemName: "person.circle.fill")
-                                        .resizable()
-                                        .frame(width: 50, height: 50)
-                                }
-                                .frame(width: 50, height: 50)
-                                .clipShape(Circle())
-                        } else {
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .clipShape(Circle())
-                        }
+                    .resizable()
+                    .placeholder {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                    }
+                    .frame(width: 50, height: 50)
+                    .clipShape(Circle())
+            } else {
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .clipShape(Circle())
+            }
             
             VStack(alignment: .leading) {
                 Text("\(user.fullName ?? "none")")
@@ -67,25 +67,25 @@ struct LeaderBoardCell: View {
         .background(Color.gray)
         .foregroundColor(.white)
         .cornerRadius(10)
-  //      .shadow(color: .yellow, radius: 10)
+        //      .shadow(color: .yellow, radius: 10)
         .onAppear {
-//                    Task {
-//                        if let avatarURL = user.avatarURL, !avatarURL.isEmpty {
-//                            do {
-//                                try await downloadImage(path: avatarURL)
-//                            } catch {
-//                                print("Error downloading image: \(error)")
-//                            }
-//                        }
-//                    }
+            //                    Task {
+            //                        if let avatarURL = user.avatarURL, !avatarURL.isEmpty {
+            //                            do {
+            //                                try await downloadImage(path: avatarURL)
+            //                            } catch {
+            //                                print("Error downloading image: \(error)")
+            //                            }
+            //                        }
+            //                    }
             
-                    loadAvatarURL()
-                }
+            loadAvatarURL()
+        }
     }
     
-//    private func downloadImage(path: String) async throws {
-//        avatarImage = try await SupabaseFunctions.shared.downloadImage(path: path)
-//      }
+    //    private func downloadImage(path: String) async throws {
+    //        avatarImage = try await SupabaseFunctions.shared.downloadImage(path: path)
+    //      }
     
     private func loadAvatarURL() {
         if let avatarPath = user.avatarURL, !avatarPath.isEmpty {
