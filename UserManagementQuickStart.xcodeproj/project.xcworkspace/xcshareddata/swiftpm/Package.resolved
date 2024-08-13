@@ -1,13 +1,13 @@
 {
-  "originHash" : "f4db4b3b802a3de848e0aa466ad073977a61ca0803854a82826c4f2a5af75b40",
+  "originHash" : "1ea2d859217465f9f30c8dcc54e8e79873b402e494272c814f3086add723123a",
   "pins" : [
     {
-      "identity" : "kingfisher",
+      "identity" : "adhan-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/onevcat/Kingfisher",
+      "location" : "https://github.com/batoulapps/adhan-swift",
       "state" : {
-        "revision" : "2ef543ee21d63734e1c004ad6c870255e8716c50",
-        "version" : "7.12.0"
+        "revision" : "6dc8309951fdaa0cd124c52b9a8de7e0da1ff2ce",
+        "version" : "1.4.0"
       }
     },
     {

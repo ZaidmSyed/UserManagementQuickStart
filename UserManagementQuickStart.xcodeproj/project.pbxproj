@@ -22,7 +22,9 @@
 		B8A3DE962C61A0FE00F3233E /* Leaderboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */; };
 		B8A3DE982C61A20C00F3233E /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */; };
 		B8A3DE9A2C61C32200F3233E /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE992C61C32200F3233E /* ListingView.swift */; };
-		B8A3DE9D2C64648900F3233E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B8A3DE9C2C64648900F3233E /* Kingfisher */; };
+		B8CF60CB2C69933900907290 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = B8CF60CA2C69933900907290 /* Adhan */; };
+		B8CF60D12C6AC98100907290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF60D02C6AC98100907290 /* ContentView.swift */; };
+		B8CF60D32C6ACBA500907290 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF60D22C6ACBA500907290 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboards.swift; sourceTree = "<group>"; };
 		B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
 		B8A3DE992C61C32200F3233E /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
+		B8CF60D02C6AC98100907290 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B8CF60D22C6ACBA500907290 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8A3DE9D2C64648900F3233E /* Kingfisher in Frameworks */,
 				B8A3DE832C60166B00F3233E /* Supabase in Frameworks */,
+				B8CF60CB2C69933900907290 /* Adhan in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,17 +82,8 @@
 			children = (
 				B8A3DE882C608DAB00F3233E /* Info.plist */,
 				B8A3DE732C60150900F3233E /* UserManagementQuickStartApp.swift */,
-				B8A3DE912C614A3E00F3233E /* GameView.swift */,
-				B8A3DE892C608E2D00F3233E /* ProfileView.swift */,
-				B8A3DE8B2C608ECE00F3233E /* Models.swift */,
-				B8A3DE932C614F9F00F3233E /* SupabaseFunctions.swift */,
-				B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */,
-				B8A3DE8F2C60A79C00F3233E /* AvatarImage.swift */,
-				B8A3DE992C61C32200F3233E /* ListingView.swift */,
-				B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */,
-				B8A3DE8D2C60A5F600F3233E /* AppView.swift */,
-				B8A3DE862C60899B00F3233E /* AuthView.swift */,
-				B8A3DE842C60169200F3233E /* Supabase.swift */,
+				B8CF60CC2C6AC70800907290 /* Views */,
+				B8CF60CD2C6AC74100907290 /* SwiftFiles */,
 				B8A3DE772C60150B00F3233E /* Assets.xcassets */,
 				B8A3DE792C60150B00F3233E /* Preview Content */,
 			);
@@ -101,6 +96,33 @@
 				B8A3DE7A2C60150B00F3233E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8CF60CC2C6AC70800907290 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8A3DE862C60899B00F3233E /* AuthView.swift */,
+				B8A3DE8D2C60A5F600F3233E /* AppView.swift */,
+				B8CF60D02C6AC98100907290 /* ContentView.swift */,
+				B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */,
+				B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */,
+				B8A3DE992C61C32200F3233E /* ListingView.swift */,
+				B8A3DE892C608E2D00F3233E /* ProfileView.swift */,
+				B8A3DE912C614A3E00F3233E /* GameView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8CF60CD2C6AC74100907290 /* SwiftFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B8A3DE8B2C608ECE00F3233E /* Models.swift */,
+				B8A3DE932C614F9F00F3233E /* SupabaseFunctions.swift */,
+				B8A3DE8F2C60A79C00F3233E /* AvatarImage.swift */,
+				B8A3DE842C60169200F3233E /* Supabase.swift */,
+				B8CF60D22C6ACBA500907290 /* LocationManager.swift */,
+			);
+			path = SwiftFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +143,7 @@
 			name = UserManagementQuickStart;
 			packageProductDependencies = (
 				B8A3DE822C60166B00F3233E /* Supabase */,
-				B8A3DE9C2C64648900F3233E /* Kingfisher */,
+				B8CF60CA2C69933900907290 /* Adhan */,
 			);
 			productName = UserManagementQuickStart;
 			productReference = B8A3DE702C60150900F3233E /* UserManagementQuickStart.app */;
@@ -153,7 +175,7 @@
 			mainGroup = B8A3DE672C60150900F3233E;
 			packageReferences = (
 				B8A3DE812C60166B00F3233E /* XCRemoteSwiftPackageReference "supabase-swift" */,
-				B8A3DE9B2C64648900F3233E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B8CF60C92C69933900907290 /* XCRemoteSwiftPackageReference "adhan-swift" */,
 			);
 			productRefGroup = B8A3DE712C60150900F3233E /* Products */;
 			projectDirPath = "";
@@ -183,6 +205,7 @@
 			files = (
 				B8A3DE852C60169200F3233E /* Supabase.swift in Sources */,
 				B8A3DE902C60A79C00F3233E /* AvatarImage.swift in Sources */,
+				B8CF60D12C6AC98100907290 /* ContentView.swift in Sources */,
 				B8A3DE8A2C608E2D00F3233E /* ProfileView.swift in Sources */,
 				B8A3DE962C61A0FE00F3233E /* Leaderboards.swift in Sources */,
 				B8A3DE8E2C60A5F600F3233E /* AppView.swift in Sources */,
@@ -190,6 +213,7 @@
 				B8A3DE8C2C608ECE00F3233E /* Models.swift in Sources */,
 				B8A3DE942C614F9F00F3233E /* SupabaseFunctions.swift in Sources */,
 				B8A3DE982C61A20C00F3233E /* LeaderBoardCell.swift in Sources */,
+				B8CF60D32C6ACBA500907290 /* LocationManager.swift in Sources */,
 				B8A3DE872C60899B00F3233E /* AuthView.swift in Sources */,
 				B8A3DE922C614A3E00F3233E /* GameView.swift in Sources */,
 				B8A3DE742C60150900F3233E /* UserManagementQuickStartApp.swift in Sources */,
@@ -326,9 +350,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UserManagementQuickStart/Preview Content\"";
+				DEVELOPMENT_TEAM = 3WQP5XHZNL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UserManagementQuickStart/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Just allow it bro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,9 +381,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UserManagementQuickStart/Preview Content\"";
+				DEVELOPMENT_TEAM = 3WQP5XHZNL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UserManagementQuickStart/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Just allow it bro";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,12 +436,12 @@
 				minimumVersion = 2.5.1;
 			};
 		};
-		B8A3DE9B2C64648900F3233E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		B8CF60C92C69933900907290 /* XCRemoteSwiftPackageReference "adhan-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			repositoryURL = "https://github.com/batoulapps/adhan-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.12.0;
+				minimumVersion = 1.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -424,10 +452,10 @@
 			package = B8A3DE812C60166B00F3233E /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
 		};
-		B8A3DE9C2C64648900F3233E /* Kingfisher */ = {
+		B8CF60CA2C69933900907290 /* Adhan */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B8A3DE9B2C64648900F3233E /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			package = B8CF60C92C69933900907290 /* XCRemoteSwiftPackageReference "adhan-swift" */;
+			productName = Adhan;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
