@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreLocation
+import Adhan
 
 @MainActor
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
@@ -31,11 +32,22 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             location = locations.first
             locationRequested = false
         }
+//        Task {
+//            do {
+//                try await pushCoordinates(location: location!)
+//            } catch {
+//                throw error
+//            }
+//        }
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find location: \(error.localizedDescription)")
         locationRequested = false
+    }
+    
+    private func pushCoordinates(location: CLLocation) async throws {
+        try await SupabaseFunctions.shared.pushCoordinates(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
     }
 }
 

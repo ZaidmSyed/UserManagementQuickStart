@@ -134,7 +134,7 @@ final class SupabaseFunctions {
             ])
             .eq("id", value: currentUser.id)
             .execute()
-    }
+    } 
 
     func fetchCoordinates() async throws -> Coordinates? {
         let currentUser = try await supabase.auth.session.user
