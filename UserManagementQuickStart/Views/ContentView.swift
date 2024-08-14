@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Adhan
 
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
@@ -15,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if let location = locationManager.location {
-                ProfileView()
+                ProfileView(location: locationManager.location!)
             } else {
                 Button(action: {
                     locationManager.requestLocation()

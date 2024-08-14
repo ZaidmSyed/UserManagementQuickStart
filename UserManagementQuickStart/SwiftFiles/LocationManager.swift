@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreLocation
-import Adhan
+//import Adhan
 
 @MainActor
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
@@ -46,8 +46,9 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationRequested = false
     }
     
-    private func pushCoordinates(location: CLLocation) async throws {
-        try await SupabaseFunctions.shared.pushCoordinates(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
-    }
+//    func pushCoordinates(location: CLLocation) async throws {
+//        let coordinates = Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//        try await SupabaseFunctions.shared.pushCoordinates(coordinates: coordinates)
+//    }
 }
 

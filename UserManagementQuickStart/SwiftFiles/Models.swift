@@ -12,7 +12,7 @@ struct Profile: Codable {
   let fullName: String?
   let website: String?
   let avatarURL: String?
-    let count: Int?
+  let count: Int?
 
   enum CodingKeys: String, CodingKey {
     case username

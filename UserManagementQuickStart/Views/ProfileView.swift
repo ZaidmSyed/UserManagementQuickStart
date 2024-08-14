@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import PhotosUI
+import Adhan
 
 struct ProfileView: View {
     @State var username = ""
@@ -21,6 +22,7 @@ struct ProfileView: View {
     @State var avatarImage: AvatarImage?
     
     @State var users: [Profile] = []
+    @State var location: CLLocation
     
     var body: some View {
         NavigationStack {
@@ -105,7 +107,14 @@ struct ProfileView: View {
             }
         }
         .task {
-            await getInitialProfile()
+            do {
+                // Call your asynchronous functions here and handle errors
+                await getInitialProfile()
+                try await SupabaseFunctions.shared.pushCoordinates(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+            } catch {
+                // Handle the error, for example, by logging it or showing an alert
+                print("Error occurred: \(error)")
+            }
         }
     }
     

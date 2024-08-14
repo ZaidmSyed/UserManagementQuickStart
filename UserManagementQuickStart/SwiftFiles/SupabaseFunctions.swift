@@ -128,7 +128,7 @@ final class SupabaseFunctions {
         
         // Push the JSON string to Supabase
         try await supabase.database
-            .from("your_table")
+            .from("profiles")
             .update([
                 "coordinates": jsonString
             ])
@@ -141,7 +141,7 @@ final class SupabaseFunctions {
 
         // Fetch data from Supabase
         let response = try await supabase.database
-            .from("your_table")
+            .from("profiles")
             .select()
             .eq("id", value: currentUser.id)
             .single()
