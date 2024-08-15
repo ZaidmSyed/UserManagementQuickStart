@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
-    @State var isLocationUpdated: Bool = false
-
+    @State private var isLocationUpdated: Bool = UserDefaults.standard.bool(forKey: "isLocationUpdated")
+    
     var body: some View {
         VStack {
             if isLocationUpdated {
@@ -20,7 +21,9 @@ struct ContentView: View {
                 Button(action: {
                     locationManager.requestLocation()
                     Task {
-                        try await SupabaseFunctions.shared.switchLocationFlag()
+                        // Update the UserDefaults flag instead of calling Supabase function
+                        UserDefaults.standard.set(true, forKey: "isLocationUpdated")
+                        isLocationUpdated = true
                     }
                 }) {
                     Text("Get Location")
@@ -31,17 +34,10 @@ struct ContentView: View {
                 }
             }
         }
-        .task {
-                    // Fetch the location flag asynchronously when the view appears
-                    do {
-                        self.isLocationUpdated = try await SupabaseFunctions.shared.fetchLocationFlag()
-////                        if !isLocationUpdated {
-////                            locationManager.requestLocation()
-////                        }
-                    } catch {
-                        print("Failed to fetch location flag: \(error.localizedDescription)")
-                    }
-                }
+        .onAppear {
+            // Fetch the location flag from UserDefaults when the view appears
+            isLocationUpdated = UserDefaults.standard.bool(forKey: "isLocationUpdated")
+        }
     }
 }
 
