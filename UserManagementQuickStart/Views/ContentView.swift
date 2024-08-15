@@ -9,15 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
-    @State private var isLocationUpdated = false // Flag to track if location has been updated.
+    @State var isLocationUpdated: Bool = false
 
     var body: some View {
         VStack {
-            if let location = locationManager.location {
+            if isLocationUpdated {
+                let location = locationManager.location
                 ProfileView(location: locationManager.location!)
             } else {
                 Button(action: {
                     locationManager.requestLocation()
+                    Task {
+                        try await SupabaseFunctions.shared.switchLocationFlag()
+                    }
                 }) {
                     Text("Get Location")
                         .padding()
@@ -27,6 +31,17 @@ struct ContentView: View {
                 }
             }
         }
+        .task {
+                    // Fetch the location flag asynchronously when the view appears
+                    do {
+                        self.isLocationUpdated = try await SupabaseFunctions.shared.fetchLocationFlag()
+////                        if !isLocationUpdated {
+////                            locationManager.requestLocation()
+////                        }
+                    } catch {
+                        print("Failed to fetch location flag: \(error.localizedDescription)")
+                    }
+                }
     }
 }
 

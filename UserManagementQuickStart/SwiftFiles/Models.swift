@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Adhan
 
 struct Profile: Codable {
   let username: String?
@@ -13,6 +14,8 @@ struct Profile: Codable {
   let website: String?
   let avatarURL: String?
   let count: Int?
+  let coordinates: Coordinates? = nil
+    let locationShared: Bool? = false
 
   enum CodingKeys: String, CodingKey {
     case username
@@ -20,5 +23,7 @@ struct Profile: Codable {
     case website
     case avatarURL = "avatar_url"
     case count
+      case coordinates
+      case locationShared = "location_shared"
   }
 }

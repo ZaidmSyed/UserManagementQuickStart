@@ -110,6 +110,8 @@ struct ProfileView: View {
             do {
                 // Call your asynchronous functions here and handle errors
                 await getInitialProfile()
+                
+                //push Coordinates to Supabase
                 try await SupabaseFunctions.shared.pushCoordinates(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
             } catch {
                 // Handle the error, for example, by logging it or showing an alert
@@ -132,7 +134,7 @@ struct ProfileView: View {
             if let avatarURL = profile.avatarURL, !avatarURL.isEmpty {
                 try await downloadImage(path: avatarURL)
             }
-            
+            //this is for the leaderboards
             try await fetchProfiles()
             
         } catch {

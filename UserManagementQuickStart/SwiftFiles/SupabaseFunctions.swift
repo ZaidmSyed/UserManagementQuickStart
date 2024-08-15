@@ -134,7 +134,9 @@ final class SupabaseFunctions {
             ])
             .eq("id", value: currentUser.id)
             .execute()
-    } 
+        
+        try await switchLocationFlag()
+    }
 
     func fetchCoordinates() async throws -> Coordinates? {
         let currentUser = try await supabase.auth.session.user
@@ -164,6 +166,40 @@ final class SupabaseFunctions {
         
         return coordinates
     }
+    
+    func switchLocationFlag() async throws {
+        let currentUser = try await supabase.auth.session.user
+        
+        let response = try await supabase.database
+            .from("profiles")
+            .update(["location_shared": true])
+            .eq("id", value: currentUser.id)
+            .execute()
+    }
+    
+    func fetchLocationFlag() async throws -> Bool {
+        do {
+            // Get the current user session
+            let currentUser = try await supabase.auth.session.user
+
+            // Fetch the profile from Supabase
+            let profile: Profile = try await supabase.database
+              .from("profiles") // Specifies the table from which to retrieve data.
+              .select() // Indicates that you want to select data from the specified table.
+              .eq("id", value: currentUser.id) // Adds a filter to the query to match a specific value in the column.
+              .single() // Specifies that you expect a single record to be returned.
+              .execute() // Executes the query against the database.
+              .value // Accesses the actual data from the query response. Used with single()
+            
+            // Access the locationShared property from the Profile struct
+            return profile.locationShared ?? false
+            
+        } catch {
+            debugPrint(error)
+            throw error
+        }
+    }
+
 
     
 }
