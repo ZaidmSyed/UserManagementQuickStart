@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Supabase
 import PhotosUI
-import Adhan
+//import Adhan
 
 final class SupabaseFunctions {
     
@@ -114,7 +114,7 @@ final class SupabaseFunctions {
     }
     
     //JSON Coordinate data
-    func pushCoordinates(coordinates: Coordinates) async throws {
+    func pushCoordinates(coordinates: MyCoordinates) async throws {
         let currentUser = try await supabase.auth.session.user
         
         // Convert Coordinates to JSON
@@ -138,7 +138,7 @@ final class SupabaseFunctions {
         try await switchLocationFlag()
     }
 
-    func fetchCoordinates() async throws -> Coordinates? {
+    func fetchCoordinates() async throws -> MyCoordinates? {
         let currentUser = try await supabase.auth.session.user
 
         // Fetch data from Supabase
@@ -162,7 +162,7 @@ final class SupabaseFunctions {
         
         // Convert Data to Coordinates
         let decoder = JSONDecoder()
-        let coordinates = try decoder.decode(Coordinates.self, from: jsonData)
+        let coordinates = try decoder.decode(MyCoordinates.self, from: jsonData)
         
         return coordinates
     }

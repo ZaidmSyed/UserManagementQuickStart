@@ -90,6 +90,15 @@ struct ProfileView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                
+                NavigationLink(destination: LocationView()) {
+                    Text("Go to LocationView")
+                        .font(.title)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
             .navigationTitle("Profile")
             .toolbar(content: {
@@ -112,7 +121,10 @@ struct ProfileView: View {
                 await getInitialProfile()
                 
                 //push Coordinates to Supabase
-                try await SupabaseFunctions.shared.pushCoordinates(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+                //try await SupabaseFunctions.shared.pushCoordinates(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+                
+                //push Coordinates to UserDefaults
+                try await UserDefaultsFunctions.shared.saveCoordinates(coordinates: MyCoordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
             } catch {
                 // Handle the error, for example, by logging it or showing an alert
                 print("Error occurred: \(error)")

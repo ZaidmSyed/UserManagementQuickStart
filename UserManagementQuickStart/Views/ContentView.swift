@@ -10,21 +10,20 @@ import Foundation
 
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
-    @State private var isLocationUpdated: Bool = UserDefaults.standard.bool(forKey: "isLocationUpdated")
+    @State private var isLocationUpdated: Bool = false
     
     var body: some View {
         VStack {
-            if isLocationUpdated {
-                let location = locationManager.location
-                ProfileView(location: locationManager.location!)
+            if isLocationUpdated, let location = locationManager.location {
+                ProfileView(location: location)
             } else {
                 Button(action: {
                     locationManager.requestLocation()
-                    Task {
-                        // Update the UserDefaults flag instead of calling Supabase function
+
+                        // Update the UserDefaults flag
                         UserDefaults.standard.set(true, forKey: "isLocationUpdated")
                         isLocationUpdated = true
-                    }
+                    
                 }) {
                     Text("Get Location")
                         .padding()
@@ -36,7 +35,7 @@ struct ContentView: View {
         }
         .onAppear {
             // Fetch the location flag from UserDefaults when the view appears
-            isLocationUpdated = UserDefaults.standard.bool(forKey: "isLocationUpdated")
+            // isLocationUpdated = UserDefaults.standard.bool(forKey: "isLocationUpdated")
         }
     }
 }
@@ -44,3 +43,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+

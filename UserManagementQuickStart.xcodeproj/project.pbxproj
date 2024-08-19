@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B846311D2C73BAE200BB5B6E /* UserDefaultsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846311C2C73BAE200BB5B6E /* UserDefaultsFunctions.swift */; };
+		B846311F2C73D19A00BB5B6E /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846311E2C73D19A00BB5B6E /* LocationView.swift */; };
+		B84631212C73D3D200BB5B6E /* MyCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84631202C73D3D200BB5B6E /* MyCoordinatesModel.swift */; };
 		B8A3DE742C60150900F3233E /* UserManagementQuickStartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3DE732C60150900F3233E /* UserManagementQuickStartApp.swift */; };
 		B8A3DE782C60150B00F3233E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A3DE772C60150B00F3233E /* Assets.xcassets */; };
 		B8A3DE7B2C60150B00F3233E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A3DE7A2C60150B00F3233E /* Preview Assets.xcassets */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B846311C2C73BAE200BB5B6E /* UserDefaultsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFunctions.swift; sourceTree = "<group>"; };
+		B846311E2C73D19A00BB5B6E /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		B84631202C73D3D200BB5B6E /* MyCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoordinatesModel.swift; sourceTree = "<group>"; };
 		B8A3DE702C60150900F3233E /* UserManagementQuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserManagementQuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A3DE732C60150900F3233E /* UserManagementQuickStartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementQuickStartApp.swift; sourceTree = "<group>"; };
 		B8A3DE772C60150B00F3233E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 				B8A3DE8D2C60A5F600F3233E /* AppView.swift */,
 				B8CF60D02C6AC98100907290 /* ContentView.swift */,
 				B8A3DE952C61A0FE00F3233E /* Leaderboards.swift */,
+				B846311E2C73D19A00BB5B6E /* LocationView.swift */,
 				B8A3DE972C61A20C00F3233E /* LeaderBoardCell.swift */,
 				B8A3DE992C61C32200F3233E /* ListingView.swift */,
 				B8A3DE892C608E2D00F3233E /* ProfileView.swift */,
@@ -118,6 +125,8 @@
 			children = (
 				B8A3DE8B2C608ECE00F3233E /* Models.swift */,
 				B8A3DE932C614F9F00F3233E /* SupabaseFunctions.swift */,
+				B84631202C73D3D200BB5B6E /* MyCoordinatesModel.swift */,
+				B846311C2C73BAE200BB5B6E /* UserDefaultsFunctions.swift */,
 				B8A3DE8F2C60A79C00F3233E /* AvatarImage.swift */,
 				B8A3DE842C60169200F3233E /* Supabase.swift */,
 				B8CF60D22C6ACBA500907290 /* LocationManager.swift */,
@@ -203,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B846311D2C73BAE200BB5B6E /* UserDefaultsFunctions.swift in Sources */,
+				B846311F2C73D19A00BB5B6E /* LocationView.swift in Sources */,
 				B8A3DE852C60169200F3233E /* Supabase.swift in Sources */,
 				B8A3DE902C60A79C00F3233E /* AvatarImage.swift in Sources */,
 				B8CF60D12C6AC98100907290 /* ContentView.swift in Sources */,
@@ -217,6 +228,7 @@
 				B8A3DE872C60899B00F3233E /* AuthView.swift in Sources */,
 				B8A3DE922C614A3E00F3233E /* GameView.swift in Sources */,
 				B8A3DE742C60150900F3233E /* UserManagementQuickStartApp.swift in Sources */,
+				B84631212C73D3D200BB5B6E /* MyCoordinatesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
