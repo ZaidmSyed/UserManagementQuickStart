@@ -67,11 +67,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B84631222C73EDF200BB5B6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8A3DE672C60150900F3233E = {
 			isa = PBXGroup;
 			children = (
 				B8A3DE722C60150900F3233E /* UserManagementQuickStart */,
 				B8A3DE712C60150900F3233E /* Products */,
+				B84631222C73EDF200BB5B6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

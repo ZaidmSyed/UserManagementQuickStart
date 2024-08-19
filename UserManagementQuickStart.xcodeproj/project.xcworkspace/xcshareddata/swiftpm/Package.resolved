@@ -1,5 +1,5 @@
 {
-  "originHash" : "1ea2d859217465f9f30c8dcc54e8e79873b402e494272c814f3086add723123a",
+  "originHash" : "4125604dbfa74b0b9fe3e0ec7fbe92cef68814edffc56566d8d06f996d30b9a5",
   "pins" : [
     {
       "identity" : "adhan-swift",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase/supabase-swift",
       "state" : {
-        "revision" : "6a88cc5916c01c12507e18da413461fe7d8a21fc",
-        "version" : "2.15.2"
+        "revision" : "4c966eafaaebc893a418e6334ef67beb0287a9ad",
+        "version" : "2.16.1"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-crypto.git",
       "state" : {
-        "revision" : "46072478ca365fe48370993833cb22de9b41567f",
-        "version" : "3.5.2"
+        "revision" : "a53a7e8f858902659d4784322bede34f4e49097e",
+        "version" : "3.6.1"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
       "state" : {
-        "revision" : "357ca1e5dd31f613a1d43320870ebc219386a495",
-        "version" : "1.2.2"
+        "revision" : "9829b6a67cc9fb08ccdb499eb92d2be5cc2f5d64",
+        "version" : "1.2.4"
       }
     }
   ],

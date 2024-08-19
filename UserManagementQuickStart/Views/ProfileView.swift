@@ -21,8 +21,8 @@ struct ProfileView: View {
     @State var imageSelection: PhotosPickerItem?
     @State var avatarImage: AvatarImage?
     
-    @State var users: [Profile] = []
-    @State var location: CLLocation
+//    @State var users: [Profile] = []
+//    @State var location: CLLocation
     
     var body: some View {
         NavigationStack {
@@ -82,7 +82,7 @@ struct ProfileView: View {
                         .cornerRadius(10)
                 }
                 
-                NavigationLink(destination: Leaderboards(users: users)) {
+                NavigationLink(destination: Leaderboards(/*users: users*/)) {
                     Text("Go to Leaderboards")
                         .font(.title)
                         .padding()
@@ -124,7 +124,7 @@ struct ProfileView: View {
                 //try await SupabaseFunctions.shared.pushCoordinates(coordinates: Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
                 
                 //push Coordinates to UserDefaults
-                try await UserDefaultsFunctions.shared.saveCoordinates(coordinates: MyCoordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+//                try await UserDefaultsFunctions.shared.saveCoordinates(coordinates: MyCoordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
             } catch {
                 // Handle the error, for example, by logging it or showing an alert
                 print("Error occurred: \(error)")
@@ -147,7 +147,7 @@ struct ProfileView: View {
                 try await downloadImage(path: avatarURL)
             }
             //this is for the leaderboards
-            try await fetchProfiles()
+       //     try await fetchProfiles()
             
         } catch {
             debugPrint(error)
@@ -171,10 +171,10 @@ struct ProfileView: View {
         }
     }
     
-    func fetchProfiles() async throws {
-        var profiles = try await SupabaseFunctions.shared.fetchProfiles()
-        users = sortProfilesByCount(users: profiles)
-    }
+//    func fetchProfiles() async throws {
+//        var profiles = try await SupabaseFunctions.shared.fetchProfiles()
+//        users = sortProfilesByCount(users: profiles)
+//    }
     
     func sortProfilesByCount(users: [Profile]) -> [Profile] {
         return users.sorted { ($0.count ?? 0) > ($1.count ?? 0) }
