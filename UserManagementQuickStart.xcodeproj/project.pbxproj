@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8350A562C797838008BD44B /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8350A552C797838008BD44B /* AppTextField.swift */; };
+		B8350A592C797A4B008BD44B /* AppSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8350A582C797A4B008BD44B /* AppSecureField.swift */; };
+		B8350A5B2C797AB5008BD44B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8350A5A2C797AB5008BD44B /* SignInView.swift */; };
+		B8350A5D2C797D71008BD44B /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8350A5C2C797D71008BD44B /* RegistrationView.swift */; };
 		B846311D2C73BAE200BB5B6E /* UserDefaultsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846311C2C73BAE200BB5B6E /* UserDefaultsFunctions.swift */; };
 		B846311F2C73D19A00BB5B6E /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846311E2C73D19A00BB5B6E /* LocationView.swift */; };
 		B84631212C73D3D200BB5B6E /* MyCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84631202C73D3D200BB5B6E /* MyCoordinatesModel.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8350A552C797838008BD44B /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		B8350A582C797A4B008BD44B /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureField.swift; sourceTree = "<group>"; };
+		B8350A5A2C797AB5008BD44B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		B8350A5C2C797D71008BD44B /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		B846311C2C73BAE200BB5B6E /* UserDefaultsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFunctions.swift; sourceTree = "<group>"; };
 		B846311E2C73D19A00BB5B6E /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		B84631202C73D3D200BB5B6E /* MyCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoordinatesModel.swift; sourceTree = "<group>"; };
@@ -96,6 +104,10 @@
 			children = (
 				B8A3DE882C608DAB00F3233E /* Info.plist */,
 				B8A3DE732C60150900F3233E /* UserManagementQuickStartApp.swift */,
+				B8350A552C797838008BD44B /* AppTextField.swift */,
+				B8350A5A2C797AB5008BD44B /* SignInView.swift */,
+				B8350A5C2C797D71008BD44B /* RegistrationView.swift */,
+				B8350A582C797A4B008BD44B /* AppSecureField.swift */,
 				B8CF60CC2C6AC70800907290 /* Views */,
 				B8CF60CD2C6AC74100907290 /* SwiftFiles */,
 				B8A3DE772C60150B00F3233E /* Assets.xcassets */,
@@ -220,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8350A592C797A4B008BD44B /* AppSecureField.swift in Sources */,
 				B846311D2C73BAE200BB5B6E /* UserDefaultsFunctions.swift in Sources */,
 				B846311F2C73D19A00BB5B6E /* LocationView.swift in Sources */,
+				B8350A5D2C797D71008BD44B /* RegistrationView.swift in Sources */,
 				B8A3DE852C60169200F3233E /* Supabase.swift in Sources */,
 				B8A3DE902C60A79C00F3233E /* AvatarImage.swift in Sources */,
 				B8CF60D12C6AC98100907290 /* ContentView.swift in Sources */,
@@ -231,7 +245,9 @@
 				B8A3DE9A2C61C32200F3233E /* ListingView.swift in Sources */,
 				B8A3DE8C2C608ECE00F3233E /* Models.swift in Sources */,
 				B8A3DE942C614F9F00F3233E /* SupabaseFunctions.swift in Sources */,
+				B8350A562C797838008BD44B /* AppTextField.swift in Sources */,
 				B8A3DE982C61A20C00F3233E /* LeaderBoardCell.swift in Sources */,
+				B8350A5B2C797AB5008BD44B /* SignInView.swift in Sources */,
 				B8CF60D32C6ACBA500907290 /* LocationManager.swift in Sources */,
 				B8A3DE872C60899B00F3233E /* AuthView.swift in Sources */,
 				B8A3DE922C614A3E00F3233E /* GameView.swift in Sources */,
